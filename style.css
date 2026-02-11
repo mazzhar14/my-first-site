@@ -210,13 +210,12 @@ h2 {
 
 /* ================= CONTACT SECTION ================= */
 .contact-section {
-  background: linear-gradient(135deg, #7e22ce, #9333ea);
-  color: white;
+  background: linear-gradient(135deg, #fdf6e3 0%, #f3e8ff 100%);
   padding: 120px 20px;
 }
 
 .contact-container {
-  max-width: 700px;
+  max-width: 650px;
   margin: auto;
   text-align: center;
 }
@@ -224,15 +223,17 @@ h2 {
 .contact-container h2 {
   font-size: 36px;
   margin-bottom: 15px;
+  color: #1f2937;
 }
 
 .contact-container p {
   margin-bottom: 40px;
-  color: #f3e8ff;
+  color: #6b7280;
+  line-height: 1.7;
 }
 
 .contact-container a {
-  color: white;
+  color: #7e22ce;
   font-weight: 500;
   text-decoration: underline;
 }
@@ -245,26 +246,37 @@ h2 {
 
 .contact-container input,
 .contact-container textarea {
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
+  padding: 15px 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
   font-size: 16px;
   outline: none;
-}
-
-.contact-btn {
-  width: 150px;
-  padding: 12px;
-  border: none;
-  border-radius: 30px;
-  background: #0f172a;
-  color: white;
-  cursor: pointer;
+  background: #ffffff;
   transition: 0.3s ease;
 }
 
+.contact-container input:focus,
+.contact-container textarea:focus {
+  border-color: #7e22ce;
+  box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.15);
+}
+
+.contact-btn {
+  width: 160px;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: #7e22ce;
+  color: white;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+  align-self: center;
+}
+
 .contact-btn:hover {
-  background: #1e293b;
+  background: #6b21a8;
   transform: translateY(-3px);
 }
+
 
