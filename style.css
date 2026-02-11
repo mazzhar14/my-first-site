@@ -1,3 +1,4 @@
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -6,16 +7,14 @@
 }
 
 body {
-  margin: 0;
   padding-top: 80px;
   color: #1f2937;
-  font-family: Arial, sans-serif;
   background: linear-gradient(-45deg, #fdf6e3, #fcebd5, #f7e6d0, #fdf6e3);
   background-size: 400% 400%;
   animation: gradientMove 12s ease infinite;
 }
 
-
+/* ================= NAVBAR ================= */
 nav {
   position: fixed;
   top: 0;
@@ -23,22 +22,10 @@ nav {
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
-  background: #fff8dc; /* solid cream */
+  background: #fff8dc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 1000; /* VERY IMPORTANT */
+  z-index: 1000;
 }
-
-nav a {
-  color: #8b5e3c;   /* soft brown */
-  text-decoration: none;
-  transition: 0.3s ease;
-  font-weight: 500;
-}
-
-nav a:hover {
-  color: #5c3a21;   /* darker brown */
-}
-
 
 nav h2 {
   color: #5c3a21;
@@ -50,28 +37,30 @@ nav ul {
   gap: 20px;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-}
-
 nav ul li a {
-  color: #8b5e3c !important;
+  color: #8b5e3c;
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s ease;
 }
 
+nav ul li a:hover {
+  color: #3b82f6;
+}
 
+/* ================= GENERAL SECTIONS ================= */
 section {
-  padding: 120px 20px;
+  padding: 80px 20px;
   text-align: center;
+  scroll-margin-top: 100px;
 }
-
 
 section h2,
 section p,
 section ul {
   max-width: 800px;
+  margin: auto;
 }
-
 
 h1 {
   font-size: 40px;
@@ -79,90 +68,15 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 20px;
-  font-size: 28px;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
-/* Hero Section */
-
+/* ================= HERO ================= */
 #home {
   min-height: 100vh;
   display: flex;
   align-items: center;
-}
-
-#home h1 {
-  font-size: 48px;
-  font-weight: bold;
-}
-
-#home p {
-  font-size: 20px;
-  margin-top: 15px;
-  color: #6b7280;  /* soft gray */
-}
-
-
-/* Navbar Hover Effect */
-nav a {
-  position: relative;
-  transition: 0.3s;
-}
-
-#home {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 25px;
-  background: #3b82f6;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s ease;
-}
-
-
-.btn:hover {
-  background: #2563eb;
-  transform: scale(1.05);
-}
-
-nav a:hover {
-  color: #3b82f6;
-}
-
-/* Fade In Animation */
-.section-hidden {
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
-}
-
-.section-show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-section {
-  scroll-margin-top: 100px;
-}
-
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 
 .hero-container {
@@ -173,11 +87,6 @@ section {
   margin: auto;
   gap: 60px;
 }
-.hero-container {
-  position: relative;
-  z-index: 2;
-}
-
 
 .hero-text {
   flex: 1;
@@ -195,33 +104,43 @@ section {
 }
 
 .hero-image {
+  flex: 1;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-image img {
-  width: 300px !important;
-  height: 300px !important;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 50% !important;
+  border-radius: 50%;
   border: 6px solid #ffffff;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+/* ================= BUTTON ================= */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
 
+.btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
 
-@keyframes flashMove {
-  0% {
-    left: -100%;
-  }
-
-/*---------------------------*/
-  
-  .reveal {
+/* ================= REVEAL ANIMATION ================= */
+.reveal {
   opacity: 0;
   transform: translateY(60px);
-  filter: brightness(0.8);
+  filter: brightness(0.9);
   transition: all 0.8s ease;
 }
 
@@ -231,20 +150,10 @@ section {
   filter: brightness(1);
 }
 
-  100% {
-    left: 150%;
-  }
-}
-
-
-.skills-section {
-  padding: 120px 20px;
-}
-
+/* ================= SKILLS ================= */
 .skills-section h2 {
   font-size: 36px;
   margin-bottom: 40px;
-  text-align: center;
 }
 
 .skills-container {
@@ -264,7 +173,6 @@ section {
   font-weight: 500;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: 0.3s ease;
-
   opacity: 0;
   transform: translateY(30px);
 }
@@ -275,9 +183,14 @@ section {
   transition: all 0.6s ease;
 }
 
-
 .skill:hover {
   transform: translateY(-5px);
   background: #f3e6d6;
 }
 
+/* ================= BACKGROUND ANIMATION ================= */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
