@@ -6,11 +6,15 @@
 }
 
 body {
-  background: #fdf6e3;
+  margin: 0;
+  padding-top: 80px;
   color: #1f2937;
-  scroll-behavior: smooth;
-  padding-top: 80px; /* pushes content below navbar */
+  font-family: Arial, sans-serif;
+  background: linear-gradient(-45deg, #fdf6e3, #fcebd5, #f7e6d0, #fdf6e3);
+  background-size: 400% 400%;
+  animation: gradientMove 12s ease infinite;
 }
+
 
 
 
@@ -139,4 +143,16 @@ nav a:hover {
 
 section {
   scroll-margin-top: 100px;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
