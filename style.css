@@ -6,20 +6,24 @@
 }
 
 body {
-  background: #fdf6e3;   /* soft cream */
-  color: #1f2937;        /* dark gray text */
+  background: #fdf6e3;
+  color: #1f2937;
   scroll-behavior: smooth;
+  padding-top: 80px; /* pushes content below navbar */
 }
+
 
 
 nav {
   position: fixed;
+  top: 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 20px 50px;
-  background: #fff8dc; /* light cream navbar */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  background: #fff8dc; /* solid cream */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  z-index: 1000; /* VERY IMPORTANT */
 }
 
 nav a {
