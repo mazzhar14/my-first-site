@@ -62,8 +62,20 @@ nav ul li a {
 
 section {
   min-height: 100vh;
-  padding: 120px 50px;
+  padding: 120px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
+
+section h2,
+section p,
+section ul {
+  max-width: 800px;
+}
+
 
 h1 {
   font-size: 40px;
@@ -221,6 +233,22 @@ section {
   0% {
     left: -100%;
   }
+
+/*---------------------------*/
+  
+  .reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  filter: brightness(0.8);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+  filter: brightness(1);
+}
+
   100% {
     left: 150%;
   }
