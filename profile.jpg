@@ -1,0 +1,15 @@
+<section id="home" class="section-hidden hero">
+  <div class="hero-container">
+    
+    <div class="hero-text">
+      <h1>Hi, I'm Syed Najeeb Mohiuddin</h1>
+      <p>Web Developer | Business Analyst | Digital Marketing Specialist</p>
+      <a href="#contact" class="btn">Contact Me</a>
+    </div>
+
+    <div class="hero-image">
+      <img src="profile.jpg" alt="Syed Najeeb Mohiuddin">
+    </div>
+
+  </div>
+</section>
