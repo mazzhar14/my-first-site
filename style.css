@@ -45,3 +45,31 @@ h2 {
   margin-bottom: 20px;
   font-size: 28px;
 }
+
+/* Hero Section */
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#home h1 {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+#home p {
+  font-size: 20px;
+  margin-top: 15px;
+  color: #cbd5e1;
+}
+
+/* Navbar Hover Effect */
+nav a {
+  position: relative;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #3b82f6;
+}
