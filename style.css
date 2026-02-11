@@ -96,3 +96,16 @@ nav a {
 nav a:hover {
   color: #3b82f6;
 }
+
+/* Fade In Animation */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.section-show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
