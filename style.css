@@ -70,6 +70,29 @@ nav a {
   transition: 0.3s;
 }
 
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+}
+
+.btn {
+  margin-top: 30px;
+  padding: 12px 25px;
+  background: #3b82f6;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  width: fit-content;
+}
+
+.btn:hover {
+  background: #2563eb;
+  transform: scale(1.05);
+}
+
 nav a:hover {
   color: #3b82f6;
 }
