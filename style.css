@@ -76,14 +76,15 @@ h2 {
 }
 
 /* Hero Section */
+
 #home {
   position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
-
 
 #home h1 {
   font-size: 48px;
@@ -167,6 +168,11 @@ section {
   margin: auto;
   gap: 60px;
 }
+.hero-container {
+  position: relative;
+  z-index: 2;
+}
+
 
 .hero-text {
   flex: 1;
@@ -196,28 +202,26 @@ section {
   #home::before {
   content: "";
   position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 60%);
-  animation: flashMove 6s linear infinite;
-  pointer-events: none;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: flashMove 3s infinite;
+  z-index: 1;
 }
 
 @keyframes flashMove {
   0% {
-    transform: translate(-30%, -30%);
-  }
-  50% {
-    transform: translate(30%, 30%);
+    left: -100%;
   }
   100% {
-    transform: translate(-30%, -30%);
+    left: 150%;
   }
-}
-
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
