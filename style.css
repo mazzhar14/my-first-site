@@ -50,10 +50,11 @@ nav ul li a:hover {
 
 /* ================= GENERAL SECTIONS ================= */
 section {
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
   scroll-margin-top: 100px;
 }
+
 
 section + section {
   margin-top: 40px;
@@ -85,11 +86,11 @@ h2 {
 
 /* ================= HERO ================= */
 #home {
-  min-height: calc(100vh - 80px);
+  min-height: 85vh;
   display: flex;
   align-items: center;
+  padding: 60px 20px;
 }
-
 
 .hero-container {
   display: flex;
