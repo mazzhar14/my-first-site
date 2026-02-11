@@ -27,15 +27,16 @@ nav {
 }
 
 nav a {
-  color: #8b5e3c;  /* soft brown */
+  color: #8b5e3c;   /* soft brown */
   text-decoration: none;
   transition: 0.3s ease;
   font-weight: 500;
 }
 
 nav a:hover {
-  color: #5c3a21;  /* darker brown on hover */
+  color: #5c3a21;   /* darker brown */
 }
+
 
 nav h2 {
   color: #5c3a21;
@@ -51,6 +52,11 @@ nav a {
   color: white;
   text-decoration: none;
 }
+
+nav ul li a {
+  color: #8b5e3c !important;
+}
+
 
 section {
   min-height: 100vh;
