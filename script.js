@@ -1,16 +1,16 @@
-const sections = document.querySelectorAll("section");
+const reveals = document.querySelectorAll(".reveal");
 
-const revealSection = () => {
-  const triggerBottom = window.innerHeight * 0.85;
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
 
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
+  reveals.forEach((el) => {
+    const elementTop = el.getBoundingClientRect().top;
 
-    if (sectionTop < triggerBottom) {
-      section.classList.add("section-show");
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
     }
   });
-};
+}
 
-window.addEventListener("scroll", revealSection);
-window.addEventListener("load", revealSection);
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
