@@ -16,8 +16,6 @@ body {
 }
 
 
-
-
 nav {
   position: fixed;
   top: 0;
@@ -79,10 +77,13 @@ h2 {
 
 /* Hero Section */
 #home {
+  position: relative;
+  min-height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
+
 
 #home h1 {
   font-size: 48px;
@@ -191,6 +192,31 @@ section {
 .hero-image img {
   width: 300px;
   height: 300px;
+
+  #home::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.25), transparent 60%);
+  animation: flashMove 6s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes flashMove {
+  0% {
+    transform: translate(-30%, -30%);
+  }
+  50% {
+    transform: translate(30%, 30%);
+  }
+  100% {
+    transform: translate(-30%, -30%);
+  }
+}
+
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
