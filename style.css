@@ -61,14 +61,10 @@ nav ul li a {
 
 
 section {
-  min-height: 100vh;
   padding: 120px 20px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
+
 
 section h2,
 section p,
@@ -90,12 +86,9 @@ h2 {
 /* Hero Section */
 
 #home {
-  position: relative;
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  overflow: hidden;
 }
 
 #home h1 {
