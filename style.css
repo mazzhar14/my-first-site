@@ -137,17 +137,20 @@ h2 {
   display: inline-block;
   margin-top: 20px;
   padding: 12px 25px;
-  background: #3b82f6;
-  color: white;
+  background: #8b5e3c;   /* same as navbar link */
+  color: #fff8dc;        /* soft cream text */
   text-decoration: none;
-  border-radius: 6px;
-  transition: 0.3s ease;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
-  background: #2563eb;
-  transform: scale(1.05);
+  background: #5c3a21;   /* darker brown */
+  color: white;
+  transform: translateY(-3px);
 }
+
 
 /* ================= REVEAL ANIMATION ================= */
 .reveal {
