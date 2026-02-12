@@ -14,3 +14,19 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
+
+const form = document.querySelector("form");
+const successMsg = document.querySelector(".success-message");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  successMsg.style.display = "block";
+
+  setTimeout(() => {
+    successMsg.classList.add("show");
+  }, 100);
+
+  form.reset();
+});
+
