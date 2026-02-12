@@ -208,16 +208,39 @@ h2 {
   100% { background-position: 0% 50%; }
 }
 
+/* ================= FLOAT ANIMATION ================= */
+@keyframes floatBox {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+
 /* ================= CONTACT SECTION ================= */
 .contact-section {
-  background: linear-gradient(135deg, #fdf6e3 0%, #f3e8ff 100%);
+  background: linear-gradient(135deg, #fdf6e3 0%, #e9d5ff 100%);
   padding: 120px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contact-container {
+  width: 100%;
   max-width: 650px;
-  margin: auto;
+  padding: 50px 40px;
+  border-radius: 20px;
+
+  /* GLASS EFFECT */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
   text-align: center;
+
+  animation: floatBox 4s ease-in-out infinite;
 }
 
 .contact-container h2 {
@@ -228,7 +251,7 @@ h2 {
 
 .contact-container p {
   margin-bottom: 40px;
-  color: #6b7280;
+  color: #4b5563;
   line-height: 1.7;
 }
 
@@ -248,25 +271,25 @@ h2 {
 .contact-container textarea {
   padding: 15px 18px;
   border-radius: 12px;
-  border: 1px solid #e5e7eb;
+  border: none;
   font-size: 16px;
   outline: none;
-  background: #ffffff;
+  background: rgba(255,255,255,0.9);
   transition: 0.3s ease;
 }
 
 .contact-container input:focus,
 .contact-container textarea:focus {
-  border-color: #7e22ce;
-  box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.15);
+  box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.25);
 }
 
+/* BUTTON */
 .contact-btn {
-  width: 160px;
-  padding: 12px;
+  width: 170px;
+  padding: 13px;
   border: none;
   border-radius: 30px;
-  background: #7e22ce;
+  background: linear-gradient(135deg, #7e22ce, #9333ea);
   color: white;
   cursor: pointer;
   font-weight: 500;
@@ -275,8 +298,7 @@ h2 {
 }
 
 .contact-btn:hover {
-  background: #6b21a8;
   transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);
 }
-
 
