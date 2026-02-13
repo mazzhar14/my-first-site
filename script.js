@@ -24,10 +24,6 @@ window.addEventListener("load", revealOnScroll);
    CONTACT FORM SUCCESS
 ================================================== */
 
-/* ==================================================
-   CONTACT FORM EMAILJS
-================================================== */
-
 const form = document.getElementById("contactForm");
 const successMsg = document.querySelector(".success-message");
 
@@ -36,8 +32,8 @@ if (form) {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_fnbx0ld",
-      "template_8hdz0wi",
+      "service_wedoi7l",
+      "template_7rht2wq",
       this
     ).then(function () {
 
