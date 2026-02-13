@@ -188,7 +188,6 @@ section p {
 /* ==================================================
    CONTACT SECTION
 ================================================== */
-
 .contact-section {
   background: linear-gradient(135deg, #fdf6e3, #e9d5ff);
   padding: 120px 20px;
@@ -201,37 +200,30 @@ section p {
   max-width: 650px;
   padding: 50px 40px;
   border-radius: 20px;
-
-  /* Glass Effect */
   background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.4);
-
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
   text-align: center;
 }
 
-/* Title */
 .contact-container h2 {
   font-size: 36px;
   margin-bottom: 15px;
 }
 
-/* Paragraph */
 .contact-container p {
   margin-bottom: 40px;
   color: #4b5563;
   line-height: 1.7;
 }
 
-/* Form Layout */
 .contact-container form {
   display: flex;
-  flex-direction: column;   /* VERY IMPORTANT */
+  flex-direction: column;
   gap: 20px;
 }
 
-/* Inputs */
 .contact-container input,
 .contact-container textarea {
   width: 100%;
@@ -244,13 +236,11 @@ section p {
   transition: 0.3s ease;
 }
 
-/* Focus Glow */
 .contact-container input:focus,
 .contact-container textarea:focus {
   box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.25);
 }
 
-/* Button */
 .contact-btn {
   align-self: center;
   width: 170px;
@@ -268,13 +258,6 @@ section p {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);
 }
-
-@media (max-width: 768px) {
-
-  .contact-container {
-    padding: 35px 20px;
-  }
-
 
 /* ==================================================
    SUCCESS MESSAGE
@@ -295,7 +278,6 @@ section p {
   transform: translateY(0);
 }
 
-
 /* ==================================================
    ANIMATIONS
 ================================================== */
@@ -303,12 +285,6 @@ section p {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
-}
-
-@keyframes floatBox {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
-  100% { transform: translateY(0px); }
 }
 
 /* ==================================================
