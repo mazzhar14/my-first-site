@@ -117,6 +117,22 @@ section + section {
   margin-top: 80px;
 }
 
+/* ====== ABOUT SECTION ======== */
+
+.about-content {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: center;
+}
+
+.about-content p {
+  margin-bottom: 22px;
+  line-height: 1.8;
+  font-size: 18px;
+  color: #5c3a21; /* soft brown */
+}
+
+
 /* ==================================================
    SKILLS
 ================================================== */
