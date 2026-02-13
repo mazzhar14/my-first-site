@@ -204,12 +204,13 @@ section + section {
 }
 
 .contact-container {
-  background: rgba(255,255,255,0.4);
-  backdrop-filter: blur(15px);
-  padding: 50px;
-  border-radius: 20px;
+  background: #fffdf7; /* slightly off-white */
+  padding: 55px;
+  border-radius: 22px;
   width: 100%;
   max-width: 650px;
+  border: 1px solid #e7dbc8; /* soft visible border */
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
 .contact-container form {
