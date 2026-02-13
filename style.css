@@ -186,14 +186,14 @@ section p {
 }
 
 /* ==================================================
-   CONTACT SECTION (Glass + Floating)
+   CONTACT SECTION
 ================================================== */
+
 .contact-section {
   background: linear-gradient(135deg, #fdf6e3, #e9d5ff);
   padding: 120px 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
 .contact-container {
@@ -201,40 +201,58 @@ section p {
   max-width: 650px;
   padding: 50px 40px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.25);
+
+  /* Glass Effect */
+  background: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
   text-align: center;
-  animation: floatBox 4s ease-in-out infinite;
 }
 
+/* Title */
 .contact-container h2 {
   font-size: 36px;
   margin-bottom: 15px;
 }
 
+/* Paragraph */
 .contact-container p {
   margin-bottom: 40px;
   color: #4b5563;
+  line-height: 1.7;
 }
 
+/* Form Layout */
+.contact-container form {
+  display: flex;
+  flex-direction: column;   /* VERY IMPORTANT */
+  gap: 20px;
+}
+
+/* Inputs */
 .contact-container input,
 .contact-container textarea {
-  padding: 15px 18px;
+  width: 100%;
+  padding: 15px;
   border-radius: 12px;
   border: none;
   font-size: 16px;
-  background: rgba(255,255,255,0.9);
+  outline: none;
+  background: rgba(255,255,255,0.95);
   transition: 0.3s ease;
 }
 
+/* Focus Glow */
 .contact-container input:focus,
 .contact-container textarea:focus {
   box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.25);
 }
 
+/* Button */
 .contact-btn {
+  align-self: center;
   width: 170px;
   padding: 13px;
   border: none;
@@ -242,6 +260,7 @@ section p {
   background: linear-gradient(135deg, #7e22ce, #9333ea);
   color: white;
   cursor: pointer;
+  font-weight: 500;
   transition: 0.3s ease;
 }
 
@@ -249,6 +268,13 @@ section p {
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);
 }
+
+@media (max-width: 768px) {
+
+  .contact-container {
+    padding: 35px 20px;
+  }
+
 
 /* ==================================================
    SUCCESS MESSAGE
