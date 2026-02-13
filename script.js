@@ -30,4 +30,15 @@ form.addEventListener("submit", function(e) {
   form.reset();
 });
 
+window.addEventListener("load", function() {
+  const overlay = document.querySelector(".intro-overlay");
+
+  setTimeout(() => {
+    overlay.classList.add("hide");
+    setTimeout(() => {
+      overlay.remove(); // completely remove from DOM
+    }, 800);
+  }, 2000);
+});
+
 
