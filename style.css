@@ -491,6 +491,20 @@ section + section {
   }
 
   /* PROJECTS */
+
+   .project-card {
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.project-content {
+  text-align: center;
+}
+
   .projects-container {
     gap: 25px;
   }
