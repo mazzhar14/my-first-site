@@ -190,6 +190,12 @@ section + section {
 .reveal.active {
   opacity: 1;
   transform: translateY(0);
+  animation: fadeFlash 0.8s ease;
+}
+
+@keyframes fadeFlash {
+  0% { filter: brightness(1.3); }
+  100% { filter: brightness(1); }
 }
 
 .success-message.show {
