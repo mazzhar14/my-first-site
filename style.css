@@ -589,6 +589,49 @@ section p {
     transform: scale(1.1);
 }
 
+/* ==============================
+   MODERN CONTACT INFO
+================================ */
+
+.contact-info-modern {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 8px 16px;
+    border-radius: 25px;
+
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(8px);
+
+    border: 1px solid rgba(139, 94, 60, 0.2);
+    transition: 0.3s ease;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #5c3a21;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.contact-item img {
+    width: 18px;
+}
+
+.contact-item:hover {
+    background: rgba(139, 94, 60, 0.1);
+    transform: translateY(-2px);
+}
+
 
 .whatsapp-btn:hover {
     background: #1ebe5d;
