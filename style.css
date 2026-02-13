@@ -286,14 +286,15 @@ section p {
   opacity: 0;
   transform: translateY(10px);
   transition: 0.5s ease;
-  display: none;     /* HIDDEN BY DEFAULT */
-
+  display: none;
 }
 
 .success-message.show {
+  display: block;
   opacity: 1;
   transform: translateY(0);
 }
+
 
 /* ==================================================
    ANIMATIONS
