@@ -1,3 +1,7 @@
+/* ==================================================
+   SCROLL REVEAL ANIMATION
+================================================== */
+
 const reveals = document.querySelectorAll(".reveal");
 
 function revealOnScroll() {
@@ -15,30 +19,44 @@ function revealOnScroll() {
 window.addEventListener("scroll", revealOnScroll);
 window.addEventListener("load", revealOnScroll);
 
-const form = document.querySelector("form");
+
+/* ==================================================
+   CONTACT FORM SUCCESS ANIMATION
+================================================== */
+
+const form = document.getElementById("contactForm");
 const successMsg = document.querySelector(".success-message");
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-  successMsg.style.display = "block";
-
-  setTimeout(() => {
     successMsg.classList.add("show");
-  }, 100);
 
-  form.reset();
-});
+    form.reset();
 
-window.addEventListener("load", function() {
+    // Hide message after 3 seconds
+    setTimeout(() => {
+      successMsg.classList.remove("show");
+    }, 3000);
+  });
+}
+
+
+/* ==================================================
+   INTRO OVERLAY FADE OUT
+================================================== */
+
+window.addEventListener("load", function () {
   const overlay = document.querySelector(".intro-overlay");
 
-  setTimeout(() => {
-    overlay.classList.add("hide");
+  if (overlay) {
     setTimeout(() => {
-      overlay.remove(); // completely remove from DOM
-    }, 800);
-  }, 2000);
+      overlay.classList.add("hide");
+
+      setTimeout(() => {
+        overlay.remove();
+      }, 800);
+    }, 1800);
+  }
 });
-
-
