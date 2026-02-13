@@ -637,3 +637,34 @@ section p {
     background: #1ebe5d;
 }
 
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #8b5e3c;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s ease;
+}
+
+.whatsapp-float img {
+    width: 26px;
+    filter: brightness(0) invert(1); /* makes icon white */
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    background: #5c3a21;
+}
+
