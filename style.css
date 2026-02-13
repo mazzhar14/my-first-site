@@ -286,6 +286,8 @@ section p {
   opacity: 0;
   transform: translateY(10px);
   transition: 0.5s ease;
+  display: none;     /* HIDDEN BY DEFAULT */
+
 }
 
 .success-message.show {
