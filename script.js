@@ -1,5 +1,5 @@
 /* ==================================================
-   SCROLL REVEAL ANIMATION
+   REVEAL ON SCROLL
 ================================================== */
 
 const reveals = document.querySelectorAll(".reveal");
@@ -21,7 +21,7 @@ window.addEventListener("load", revealOnScroll);
 
 
 /* ==================================================
-   CONTACT FORM SUCCESS ANIMATION
+   CONTACT FORM SUCCESS
 ================================================== */
 
 const form = document.getElementById("contactForm");
@@ -32,10 +32,8 @@ if (form) {
     e.preventDefault();
 
     successMsg.classList.add("show");
-
     form.reset();
 
-    // Hide message after 3 seconds
     setTimeout(() => {
       successMsg.classList.remove("show");
     }, 3000);
@@ -44,10 +42,10 @@ if (form) {
 
 
 /* ==================================================
-   INTRO OVERLAY FADE OUT
+   INTRO OVERLAY
 ================================================== */
 
-window.addEventListener("load", function () {
+window.addEventListener("load", function() {
   const overlay = document.querySelector(".intro-overlay");
 
   if (overlay) {
@@ -57,6 +55,7 @@ window.addEventListener("load", function () {
       setTimeout(() => {
         overlay.remove();
       }, 800);
-    }, 1800);
+
+    }, 2000);
   }
 });
