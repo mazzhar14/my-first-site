@@ -9,8 +9,8 @@
 /* ================= BODY ================= */
 body {
   padding-top: 60px;
-  background: #f4f9f7;
-  color: #1f2937;
+  background: #fdf6e3; /* Cream */
+  color: #5c3a21;       /* Soft Brown */
 }
 
 /* ================= NAVBAR ================= */
@@ -19,44 +19,53 @@ nav {
   top: 0;
   width: 100%;
   height: 60px;
-  background: #ffffff;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 0 50px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  background: #fff8dc;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.logo img {
+  height: 45px;
 }
 
 nav ul {
   display: flex;
-  list-style: none;
   gap: 25px;
+  list-style: none;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #1f7a5a;
-  font-weight: 600;
+  color: #8b5e3c;
+  font-weight: 500;
 }
 
 nav ul li a:hover {
-  color: #145a41;
+  color: #5c3a21;
+}
+
+/* ================= SECTIONS ================= */
+section {
+  padding: 100px 20px;
+  text-align: center;
 }
 
 /* ================= HERO ================= */
 #home {
-  min-height: 85vh;
+  min-height: calc(100vh - 60px);
   display: flex;
   align-items: center;
-  padding: 60px 20px;
 }
 
 .hero-container {
   max-width: 1200px;
   margin: auto;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   gap: 60px;
 }
 
@@ -68,43 +77,30 @@ nav ul li a:hover {
 .hero-text p {
   font-size: 20px;
   margin-bottom: 25px;
-  color: #4b5563;
+  color: #7a5a3a;
 }
 
 .hero-image img {
-  width: 280px;
-  height: 280px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  border: 6px solid #e6f4ef;
+  border: 6px solid white;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
 }
 
 /* ================= BUTTON ================= */
 .btn {
-  background: #1f7a5a;
-  color: white;
+  background: #8b5e3c;
+  color: #fff8dc;
   padding: 12px 25px;
   border-radius: 8px;
   text-decoration: none;
-  display: inline-block;
-  border: none;
-  cursor: pointer;
+  font-weight: 600;
 }
 
 .btn:hover {
-  background: #145a41;
-}
-
-/* ================= SECTIONS ================= */
-section {
-  padding: 100px 20px;
-  text-align: center;
-}
-
-section h2 {
-  font-size: 32px;
-  margin-bottom: 40px;
-  color: #1f7a5a;
+  background: #5c3a21;
 }
 
 /* ================= SKILLS ================= */
@@ -113,19 +109,20 @@ section h2 {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  max-width: 900px;
+  margin: auto;
 }
 
 .skill {
-  background: #e6f4ef;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: 600;
-  color: #145a41;
+  background: white;
+  padding: 12px 25px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* ================= PROJECTS ================= */
 .projects-container {
-  max-width: 1000px;
+  max-width: 900px;
   margin: auto;
   display: flex;
   flex-direction: column;
@@ -141,54 +138,60 @@ section h2 {
 }
 
 .project-card h3 {
-  color: #1f7a5a;
   margin-bottom: 15px;
 }
 
+.project-card p {
+  margin-bottom: 20px;
+  color: #7a5a3a;
+}
+
 .project-btn {
-  display: inline-block;
-  margin-top: 15px;
-  background: #1f7a5a;
-  color: white;
-  padding: 10px 20px;
+  background: #8b5e3c;
+  color: #fff8dc;
+  padding: 8px 18px;
   border-radius: 6px;
   text-decoration: none;
 }
 
 .project-btn:hover {
-  background: #145a41;
+  background: #5c3a21;
 }
 
 /* ================= CONTACT ================= */
-form {
+.contact-container {
   max-width: 600px;
   margin: auto;
+}
+
+.contact-container form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-input, textarea {
+.contact-container input,
+.contact-container textarea {
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #e5d3bf;
+}
+
+.contact-btn {
+  background: #8b5e3c;
+  color: #fff8dc;
   padding: 12px;
-  border-radius: 8px;
-  border: 1px solid #cbd5e1;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+.contact-btn:hover {
+  background: #5c3a21;
 }
 
 .success-message {
   display: none;
+  margin-top: 15px;
   color: green;
-}
-
-.success-message.show {
-  display: block;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-
-  .hero-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
 }
