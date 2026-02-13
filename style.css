@@ -570,6 +570,26 @@ section p {
     width: 22px;
 }
 
+.whatsapp-float {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #25D366;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 28px;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+
 .whatsapp-btn:hover {
     background: #1ebe5d;
 }
