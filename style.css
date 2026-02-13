@@ -15,6 +15,17 @@ body {
 }
 
 /* ================= NAVBAR ================= */
+
+.logo img {
+  height: 45px;
+  width: auto;
+  transition: 0.3s ease;
+}
+
+.logo img:hover {
+  transform: scale(1.05);
+}
+
 nav {
   position: fixed;
   top: 0;
