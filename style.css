@@ -1,6 +1,4 @@
-/* ==================================================
-   RESET
-================================================== */
+/* ================= RESET ================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,45 +6,27 @@
   font-family: Arial, sans-serif;
 }
 
-/* ==================================================
-   BODY & BACKGROUND
-================================================== */
+/* ================= BODY ================= */
 body {
-  padding-top: 60px; /* equal to navbar height */
+  padding-top: 60px;
+  background: #f4f9f7;
   color: #1f2937;
-  background: linear-gradient(-45deg, #fdf6e3, #fcebd5, #f7e6d0, #fdf6e3);
-  background-size: 400% 400%;
-  animation: gradientMove 12s ease infinite;
 }
 
-/* ==================================================
-   NAVBAR
-================================================== */
+/* ================= NAVBAR ================= */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   height: 60px;
+  background: #ffffff;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   padding: 0 50px;
-  background: #fff8dc;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* Logo */
-.logo img {
-  height: 45px;
-  transition: 0.3s ease;
-}
-
-.logo img:hover {
-  transform: scale(1.05);
-}
-
-/* Nav Links */
 nav ul {
   display: flex;
   list-style: none;
@@ -54,54 +34,29 @@ nav ul {
 }
 
 nav ul li a {
-  color: #8b5e3c;
   text-decoration: none;
-  font-weight: 500;
-  transition: 0.3s ease;
+  color: #1f7a5a;
+  font-weight: 600;
 }
 
 nav ul li a:hover {
-  color: #3b82f6;
+  color: #145a41;
 }
 
-/* ==================================================
-   GENERAL SECTIONS
-================================================== */
-section {
-  padding: 100px 20px;
-  text-align: center;
-  scroll-margin-top: 80px;
-}
-
-section + section {
-  margin-top: 60px;
-}
-
-section h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-}
-
-section p {
-  margin-top: 15px;
-  line-height: 1.7;
-}
-
-/* ==================================================
-   HERO SECTION
-================================================== */
+/* ================= HERO ================= */
 #home {
-  min-height: calc(100vh - 60px);
+  min-height: 85vh;
   display: flex;
   align-items: center;
+  padding: 60px 20px;
 }
 
 .hero-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   max-width: 1200px;
   margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 60px;
 }
 
@@ -113,325 +68,127 @@ section p {
 .hero-text p {
   font-size: 20px;
   margin-bottom: 25px;
-  color: #6b7280;
+  color: #4b5563;
 }
 
 .hero-image img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
+  width: 280px;
+  height: 280px;
   border-radius: 50%;
-  border: 6px solid #ffffff;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  object-fit: cover;
+  border: 6px solid #e6f4ef;
 }
 
-/* ==================================================
-   PRIMARY BUTTON
-================================================== */
+/* ================= BUTTON ================= */
 .btn {
-  display: inline-block;
+  background: #1f7a5a;
+  color: white;
   padding: 12px 25px;
-  background: #8b5e3c;
-  color: #fff8dc;
-  text-decoration: none;
   border-radius: 8px;
-  font-weight: 600;
-  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  cursor: pointer;
 }
 
 .btn:hover {
-  background: #5c3a21;
-  transform: translateY(-3px);
+  background: #145a41;
 }
 
-/* ==================================================
-   REVEAL ANIMATION
-================================================== */
-.reveal {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: 0.8s ease;
+/* ================= SECTIONS ================= */
+section {
+  padding: 100px 20px;
+  text-align: center;
 }
 
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
+section h2 {
+  font-size: 32px;
+  margin-bottom: 40px;
+  color: #1f7a5a;
 }
 
-/* ==================================================
-   SKILLS SECTION
-================================================== */
+/* ================= SKILLS ================= */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
-  max-width: 900px;
-  margin: auto;
 }
 
 .skill {
-  background: #ffffff;
-  color: #5c3a21;
-  padding: 12px 25px;
-  border-radius: 15px;
-  font-weight: 500;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-  transition: 0.3s ease;
-}
-
-.skill:hover {
-  transform: translateY(-5px);
-  background: #f3e6d6;
-}
-
-/* ==================================================
-   CONTACT SECTION
-================================================== */
-.contact-section {
-  background: linear-gradient(135deg, #fdf6e3, #e9d5ff);
-  padding: 120px 20px;
-  display: flex;
-  justify-content: center;
-}
-
-.contact-container {
-  width: 100%;
-  max-width: 650px;
-  padding: 50px 40px;
+  background: #e6f4ef;
+  padding: 10px 20px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.35);
-  backdrop-filter: blur(15px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.08);
-  text-align: center;
+  font-weight: 600;
+  color: #145a41;
 }
 
-.contact-container h2 {
-  font-size: 36px;
+/* ================= PROJECTS ================= */
+.projects-container {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.project-card {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #1f7a5a;
   margin-bottom: 15px;
 }
 
-.contact-container p {
-  margin-bottom: 40px;
-  color: #4b5563;
-  line-height: 1.7;
+.project-btn {
+  display: inline-block;
+  margin-top: 15px;
+  background: #1f7a5a;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
 }
 
-.contact-container form {
+.project-btn:hover {
+  background: #145a41;
+}
+
+/* ================= CONTACT ================= */
+form {
+  max-width: 600px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.contact-container input,
-.contact-container textarea {
-  width: 100%;
-  padding: 15px;
-  border-radius: 12px;
-  border: none;
-  font-size: 16px;
-  outline: none;
-  background: rgba(255,255,255,0.95);
-  transition: 0.3s ease;
+input, textarea {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
 }
 
-.contact-container input:focus,
-.contact-container textarea:focus {
-  box-shadow: 0 0 0 3px rgba(126, 34, 206, 0.25);
-}
-
-.contact-btn {
-  align-self: center;
-  width: 170px;
-  padding: 13px;
-  border: none;
-  border-radius: 30px;
-  background: linear-gradient(135deg, #7e22ce, #9333ea);
-  color: white;
-  cursor: pointer;
-  font-weight: 500;
-  transition: 0.3s ease;
-}
-
-.contact-btn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(126, 34, 206, 0.3);
-}
-
-/* ==================================================
-   SUCCESS MESSAGE
-================================================== */
 .success-message {
-  margin-top: 20px;
-  color: #16a34a;
-  font-weight: 600;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: 0.5s ease;
   display: none;
+  color: green;
 }
 
 .success-message.show {
   display: block;
-  opacity: 1;
-  transform: translateY(0);
 }
 
-/* ==================================================
-   ANIMATIONS
-================================================== */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
-
-/* ==================================================
-   RESPONSIVE
-================================================== */
+/* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
-
-  nav {
-    padding: 0 20px;
-  }
 
   .hero-container {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-image img {
-    width: 220px;
-    height: 220px;
-  }
-
-  .contact-container {
-    padding: 35px 20px;
-  }
-
 }
-
-/* ==================================================
-   PROJECTS SECTION
-================================================== */
-
-.projects-section {
-  padding: 120px 20px;
-  background: linear-gradient(135deg, #7e22ce, #9333ea);
-  color: white;
-  text-align: center;
-}
-
-.section-title {
-  font-size: 40px;
-  margin-bottom: 60px;
-}
-
-/* Container */
-.projects-container {
-  max-width: 1100px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-}
-
-/* Card */
-.project-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(12px);
-  border-radius: 20px;
-  padding: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  transition: 0.4s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-}
-
-/* Reverse Layout */
-.project-card.reverse {
-  flex-direction: row-reverse;
-}
-
-/* Text */
-.project-text {
-  flex: 1;
-  text-align: left;
-}
-
-.project-text h3 {
-  font-size: 26px;
-  margin-bottom: 15px;
-}
-
-.project-text p {
-  line-height: 1.7;
-  margin-bottom: 20px;
-}
-
-/* Tags */
-.project-tags {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
-}
-
-.project-tags span {
-  background: rgba(0,0,0,0.3);
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 14px;
-}
-
-/* Button */
-.project-btn {
-  display: inline-block;
-  padding: 10px 20px;
-  background: white;
-  color: #7e22ce;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s ease;
-}
-
-.project-btn:hover {
-  background: #f3e8ff;
-}
-
-/* Image */
-.project-image {
-  flex: 1;
-}
-
-.project-image img {
-  width: 100%;
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-
-  .project-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .project-card.reverse {
-    flex-direction: column;
-  }
-
-  .project-text {
-    text-align: center;
-  }
-
-}
-
