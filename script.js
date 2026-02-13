@@ -24,6 +24,10 @@ window.addEventListener("load", revealOnScroll);
    CONTACT FORM SUCCESS
 ================================================== */
 
+/* ==================================================
+   CONTACT FORM EMAILJS
+================================================== */
+
 const form = document.getElementById("contactForm");
 const successMsg = document.querySelector(".success-message");
 
@@ -31,14 +35,26 @@ if (form) {
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    successMsg.classList.add("show");
-    form.reset();
+    emailjs.sendForm(
+      "service_fnbx0ld",
+      "template_8hdz0wi",
+      this
+    ).then(function () {
 
-    setTimeout(() => {
-      successMsg.classList.remove("show");
-    }, 3000);
+      successMsg.classList.add("show");
+      form.reset();
+
+      setTimeout(() => {
+        successMsg.classList.remove("show");
+      }, 3000);
+
+    }, function (error) {
+      alert("Failed to send message. Please try again.");
+      console.log(error);
+    });
   });
 }
+
 
 
 /* ==================================================
