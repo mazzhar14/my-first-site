@@ -330,7 +330,7 @@ h2 {
     font-size: 28px;
   }
 
-  /* ================= INTRO OVERLAY ================= */
+ /* ================= INTRO OVERLAY ================= */
 
 .intro-overlay {
   position: fixed;
@@ -340,8 +340,12 @@ h2 {
   align-items: center;
   justify-content: center;
   z-index: 99999;
-  animation: overlayFadeOut 1s ease forwards;
-  animation-delay: 2s;
+  transition: opacity 0.8s ease;
+}
+
+.intro-overlay.hide {
+  opacity: 0;
+  pointer-events: none;
 }
 
 .intro-content h1 {
@@ -366,12 +370,5 @@ h2 {
 @keyframes flashMove {
   0% { left: -100%; }
   100% { left: 150%; }
-}
-
-@keyframes overlayFadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
 }
 
