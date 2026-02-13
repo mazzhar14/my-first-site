@@ -259,6 +259,57 @@ section + section {
   background: #5c3a21;
 }
 
+/* ===============================
+   PROJECT ENHANCEMENTS
+================================= */
+
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Image Hover Zoom */
+.project-image img {
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+/* Tech Tags */
+.project-tags {
+  margin-bottom: 15px;
+}
+
+.project-tags span {
+  display: inline-block;
+  background: #f3e6d6;
+  color: #5c3a21;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin: 5px 8px 5px 0;
+}
+
+/* Buttons Layout */
+.project-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+/* Secondary Button */
+.project-btn.secondary {
+  background: transparent;
+  border: 2px solid #8b5e3c;
+  color: #8b5e3c;
+}
+
+.project-btn.secondary:hover {
+  background: #8b5e3c;
+  color: #fff8dc;
+}
+
 
 /* ==================================================
    CONTACT
@@ -530,5 +581,10 @@ section + section {
     flex-wrap: wrap;
     justify-content: center;
   }
+   
+   .project-card.reverse {
+  flex-direction: column;
+}
+
 
 }
