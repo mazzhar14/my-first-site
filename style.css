@@ -1,4 +1,6 @@
-/* RESET */
+/* ==================================================
+   RESET
+================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -15,12 +17,11 @@ body {
 /* ==================================================
    NAVBAR
 ================================================== */
-
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px;               /* Increased height */
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -30,16 +31,32 @@ nav {
   z-index: 1000;
 }
 
-/* Logo */
 .logo img {
-  height: 60px;              /* Adjusted properly */
+  height: 60px;
   width: auto;
   display: block;
 }
 
-/* ================================================== */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
 
-/* HERO */
+nav ul li a {
+  text-decoration: none;
+  color: #8b5e3c;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #5c3a21;
+}
+
+/* ==================================================
+   HERO
+================================================== */
 #home {
   min-height: 85vh;
   display: flex;
@@ -63,7 +80,6 @@ nav {
   border: 6px solid white;
 }
 
-/* BUTTON */
 .btn {
   display: inline-block;
   padding: 12px 25px;
@@ -71,33 +87,45 @@ nav {
   color: #fff8dc;
   border-radius: 8px;
   text-decoration: none;
+  transition: 0.3s ease;
 }
 
-/* SECTIONS */
+.btn:hover {
+  background: #5c3a21;
+}
+
+/* ==================================================
+   GENERAL SECTIONS
+================================================== */
 section {
-  padding: 140px 20px; 
+  padding: 140px 20px;
   text-align: center;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 120px;
 }
 
 section h2 {
   margin-bottom: 35px;
+  font-size: 32px;
 }
 
 section p {
   margin-top: 20px;
+  line-height: 1.7;
 }
 
 section + section {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 
+/* ==================================================
+   SKILLS
+================================================== */
 .skills-container {
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  /* gap: 20px; */
+  gap: 20px;
 }
 
 .skill {
@@ -105,9 +133,17 @@ section + section {
   padding: 12px 20px;
   border-radius: 15px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
 }
 
-/* PROJECTS */
+.skill:hover {
+  transform: translateY(-5px);
+  background: #f3e6d6;
+}
+
+/* ==================================================
+   PROJECTS
+================================================== */
 .projects-container {
   max-width: 900px;
   margin: 50px auto 0;
@@ -121,6 +157,11 @@ section + section {
   padding: 40px;
   border-radius: 18px;
   box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+  transition: 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
 }
 
 .project-btn {
@@ -133,7 +174,13 @@ section + section {
   text-decoration: none;
 }
 
-/* CONTACT */
+.project-btn:hover {
+  background: #5c3a21;
+}
+
+/* ==================================================
+   CONTACT
+================================================== */
 .contact-section {
   display: flex;
   justify-content: center;
@@ -169,18 +216,23 @@ section + section {
   border: none;
   padding: 12px;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .success-message {
   display: none;
   margin-top: 20px;
   color: #16a34a;
+  font-weight: 600;
+}
+
+.success-message.show {
+  display: block;
 }
 
 /* ==================================================
    REVEAL ANIMATION
 ================================================== */
-
 .reveal {
   opacity: 0;
   transform: translateY(80px);
@@ -198,6 +250,22 @@ section + section {
   100% { filter: brightness(1); }
 }
 
-.success-message.show {
-  display: block;
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+
+  nav {
+    padding: 0 20px;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 220px;
+    height: 220px;
+  }
 }
