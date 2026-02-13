@@ -2,88 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Syed Najeeb Mohiuddin | Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<!-- ================= INTRO LOADER ================= -->
-<!-- INTRO OVERLAY -->
+<!-- ==================================================
+   INTRO OVERLAY (Optional Entry Animation)
+================================================== -->
 <div class="intro-overlay">
   <div class="intro-content">
     <h1>Syed Najeeb Mohiuddin</h1>
   </div>
 </div>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo">
-        <img src="logo.png" alt="SNM Logo">
+<!-- ==================================================
+   NAVBAR
+================================================== -->
+<nav>
+  <div class="logo">
+    <img src="logo.png" alt="SNM Logo">
+  </div>
+
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ==================================================
+   HERO SECTION
+================================================== -->
+<section id="home">
+  <div class="hero-container">
+
+    <div class="hero-text">
+      <h1>Hi, I'm Syed Najeeb Mohiuddin</h1>
+      <p>
+        Web Developer | Business Analyst | Digital Marketing Specialist
+      </p>
+      <a href="#contact" class="btn">Contact Me</a>
     </div>
 
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <div class="hero-container">
-
-      <div class="hero-text">
-        <h1>Hi, I'm Syed Najeeb Mohiuddin</h1>
-        <p>Web Developer | Business Analyst | Digital Marketing Specialist</p>
-        <a href="#contact" class="btn">Contact Me</a>
-      </div>
-
-      <div class="hero-image">
-         <img src="profile.jpeg" alt="Syed Najeeb Mohiuddin">
-      </div>
-
-
+    <div class="hero-image">
+      <img src="profile.jpeg" alt="Syed Najeeb Mohiuddin">
     </div>
-  </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="reveal">
-    <h2>About Me</h2>
-    <p>
-      I help businesses grow digitally through modern web development 
-      and result-driven marketing strategies.
-    </p>
-  </section>
+  </div>
+</section>
 
-  <!-- SKILLS -->
-  <!-- SKILLS -->
-  <section id="skills" class="reveal skills-section">
+<!-- ==================================================
+   ABOUT SECTION
+================================================== -->
+<section id="about" class="reveal">
+  <h2>About Me</h2>
+  <p>
+    I help businesses grow digitally through modern web development 
+    and result-driven marketing strategies.
+  </p>
+</section>
+
+<!-- ==================================================
+   SKILLS SECTION
+================================================== -->
+<section id="skills" class="reveal skills-section">
   <h2>My Skills</h2>
-    <div class="skills-container">
-      <div class="skill">SEO</div>
-      <div class="skill">CSS</div>
-      <div class="skill">HTML</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Business Analysis</div>
-      <div class="skill">Email Marketing</div>
-      <div class="skill">Market Research</div>
-      <div class="skill">Digital Marketing</div>
-     </div>
-    </section>
 
+  <div class="skills-container">
+    <div class="skill">SEO</div>
+    <div class="skill">CSS</div>
+    <div class="skill">HTML</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Business Analysis</div>
+    <div class="skill">Email Marketing</div>
+    <div class="skill">Market Research</div>
+    <div class="skill">Digital Marketing</div>
+  </div>
+</section>
 
-  <!-- PROJECTS -->
-  <section id="projects" class="reveal">
-    <h2>Projects</h2>
-    <p>Coming Soon...</p>
-  </section>
+<!-- ==================================================
+   PROJECTS SECTION (Ready for Upgrade)
+================================================== -->
+<section id="projects" class="reveal">
+  <h2>Projects</h2>
+  <p>Coming Soon...</p>
+</section>
 
-  <!-- CONTACT -->
+<!-- ==================================================
+   CONTACT SECTION
+================================================== -->
 <section id="contact" class="contact-section reveal">
   <div class="contact-container">
+
     <h2>Contact Me</h2>
+
     <p>
       Please contact me directly 
       <a href="mailto:syed.mohiuddin042@gmail.com">
@@ -92,28 +109,23 @@
       or through this form
     </p>
 
-    <form>
+    <form id="contactForm">
       <input type="email" placeholder="Your Email" required>
       <textarea placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit" class="contact-btn">Submit ✈</button>
-      <p class="success-message" style="display:none;">✅ Message Sent Successfully!</p>
+
+      <button type="submit" class="contact-btn">
+        Submit ✈
+      </button>
+
+      <p class="success-message">
+        ✅ Message Sent Successfully!
+      </p>
     </form>
+
   </div>
 </section>
 
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
