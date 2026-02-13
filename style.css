@@ -318,59 +318,120 @@ section p {
 
 .projects-section {
   padding: 120px 20px;
+  background: linear-gradient(135deg, #7e22ce, #9333ea);
+  color: white;
+  text-align: center;
 }
 
+.section-title {
+  font-size: 40px;
+  margin-bottom: 60px;
+}
+
+/* Container */
 .projects-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
   max-width: 1100px;
-  margin: 60px auto 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
 }
 
+/* Card */
 .project-card {
-  background: #ffffff;
-  padding: 30px;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  transition: 0.4s ease;
 }
 
 .project-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
 }
 
-.project-img {
-  height: 160px;
-  border-radius: 12px;
+/* Reverse Layout */
+.project-card.reverse {
+  flex-direction: row-reverse;
+}
+
+/* Text */
+.project-text {
+  flex: 1;
+  text-align: left;
+}
+
+.project-text h3 {
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+.project-text p {
+  line-height: 1.7;
   margin-bottom: 20px;
-  background: linear-gradient(135deg, #8b5e3c, #5c3a21);
 }
 
-.project-card h3 {
-  margin-bottom: 10px;
-  color: #5c3a21;
-}
-
-.project-card p {
-  font-size: 15px;
+/* Tags */
+.project-tags {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
   margin-bottom: 20px;
-  color: #6b7280;
 }
 
+.project-tags span {
+  background: rgba(0,0,0,0.3);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Button */
 .project-btn {
   display: inline-block;
-  padding: 8px 18px;
-  background: #8b5e3c;
-  color: #fff8dc;
-  border-radius: 6px;
+  padding: 10px 20px;
+  background: white;
+  color: #7e22ce;
+  border-radius: 8px;
   text-decoration: none;
-  font-size: 14px;
+  font-weight: 600;
   transition: 0.3s ease;
 }
 
 .project-btn:hover {
-  background: #5c3a21;
+  background: #f3e8ff;
 }
+
+/* Image */
+.project-image {
+  flex: 1;
+}
+
+.project-image img {
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-card.reverse {
+    flex-direction: column;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+
+}
+
