@@ -286,3 +286,62 @@ section + section {
     height: 220px;
   }
 }
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.site-footer {
+  background: #fff8dc; /* same as navbar */
+  box-shadow: 0 -2px 8px rgba(0,0,0,0.08);
+  padding: 30px 50px;
+  margin-top: 120px;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer-left img {
+  height: 45px;
+}
+
+.footer-left p {
+  font-size: 14px;
+  color: #5c3a21;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #8b5e3c;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #5c3a21;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
