@@ -31,10 +31,3 @@ form.addEventListener("submit", function(e) {
 });
 
 
-window.addEventListener("load", function() {
-  const loader = document.getElementById("intro-loader");
-
-  setTimeout(() => {
-    loader.classList.add("hide-loader");
-  }, 2000); // shows for 2 seconds
-});
