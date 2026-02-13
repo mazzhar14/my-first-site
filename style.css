@@ -7,7 +7,7 @@
 }
 
 body {
-  padding-top: 80px;
+  padding-top: 60px;
   color: #1f2937;
   background: linear-gradient(-45deg, #fdf6e3, #fcebd5, #f7e6d0, #fdf6e3);
   background-size: 400% 400%;
@@ -21,7 +21,7 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 20px 50px;
+  padding: 10px 40px;
   background: #fff8dc;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   z-index: 1000;
